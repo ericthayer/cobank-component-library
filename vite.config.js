@@ -1,4 +1,5 @@
 const path = require('path')
+import { fieldGuidePages } from './documentation/plugin.mjs'
 
 export default {
   root: path.resolve(__dirname, 'src'),
@@ -11,6 +12,7 @@ export default {
       ],
     },
   },
+  plugins: [fieldGuidePages()],
   server: {
     port: 8080
   }

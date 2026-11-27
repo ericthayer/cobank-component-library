@@ -1,8 +1,6 @@
+import { guidePages } from './guide-catalog.mjs';
 export const searchItems=Object.freeze([
-  {title:'Foundations',description:'Color, typography, spacing, and shared principles',href:'#foundation-detail',keywords:'tokens theme palette color typography spacing breakpoints'},
-  {title:'Components',description:'Reusable controls and interaction patterns',href:'#component-detail',keywords:'button form input switch grid table patterns'},
-  {title:'Workflows',description:'A starting point for design, development, and content',href:'#workflows',keywords:'figma react developer engineering content writing'},
-  {title:'Field guides',description:'Practical guidance for every discipline',href:'#resources',keywords:'guides resources documentation getting started'},
+  ...guidePages,
   {title:'Agrikit engineering reference',description:'Component library, delivery platform, and MCP tooling',href:'https://state-of-agrikit.netlify.app/deck/',keywords:'ai agents mcp toolkit release react agrikit',external:true}
 ]);
 export class SystemSearch extends HTMLElement {
