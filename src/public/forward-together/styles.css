@@ -333,6 +333,15 @@ small { font-size: 12px; }
   background: #f3f7f9f2;
   border-radius: 2px;
 }
+.workflow-visual .workflow-caption {
+  position: relative;
+  align-self: center;
+  width: max-content;
+  max-width: 100%;
+  padding: .2em .65em;
+  background: var(--field);
+  border-radius: 2px;
+}
 .agent-symbol {
   display: inline-flex; align-items: center; white-space: nowrap;
   letter-spacing: -.07em; gap: .04em;
