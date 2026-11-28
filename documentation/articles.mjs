@@ -21,16 +21,21 @@ export const articles = {
     ['Library reference', '<p>The examples here use native HTML so you can inspect their behavior. Check the component API and theme for the version your product ships before adopting an example.</p><a class="reference-link" href="https://state-of-agrikit.netlify.app/deck/">Explore the Agrikit reference ↗</a>']
   ],
   '/components/buttons/': [
-    ['Interactive example', 'button-demo'],
-    ['Usage', '<p>Lead with a verb and include the object when there is room for doubt. “Save draft” and “Send request” are different commitments. Give the action that advances the current task the strongest visual emphasis.</p><p>Use a link for navigation to another page. A button is appropriate when someone changes the current state, opens a dialog or submits a form.</p>'],
-    ['Native markup', 'button-code'],
-    ['Keyboard and feedback', '<p>Tab to the example and press Space or Enter. Focus stays on the button and the status announces the result. A production save should confirm success only after the write succeeds and preserve entered data when it fails.</p>']
+    ['Interactive example', 'button-demo', 'examples'],
+    ['Disabled state', 'button-disabled', 'examples'],
+    ['Native markup', 'button-code', 'code'],
+    ['Implementation contract', '<dl><dt>Element and type</dt><dd>Use a native <code>button</code>. Set <code>type="button"</code> for an action handled in script and <code>type="submit"</code> for form submission.</dd><dt>Disabled state</dt><dd>The native <code>disabled</code> attribute prevents activation and removes the button from the tab sequence.</dd><dt>Completion feedback</dt><dd>Update a nearby <code>role="status"</code> region after the action completes.</dd></dl><p>For product-specific imports and props, check the <a href="https://state-of-agrikit.netlify.app/deck/">Agrikit reference</a> and the package version your project uses.</p>', 'code'],
+    ['Usage', '<p>Lead with a verb and include the object when there is room for doubt. “Save draft” and “Send request” are different commitments. Give the action that advances the current task the strongest visual emphasis.</p><p>Use a link for navigation to another page. A button is appropriate when someone changes the current state, opens a dialog or submits a form.</p>', 'usage'],
+    ['Keyboard and feedback', '<p>Tab to the example and press Space or Enter. Focus stays on the button and the status announces the result. A production save should confirm success only after the write succeeds and preserve entered data when it fails.</p><p>Keep the focus indicator visible. When an action is unavailable, put the reason in visible text near the control so people can find it without focusing the button.</p>', 'usage'],
+    ['Documentation history', '<p>The initial guide introduced the save-draft example and native button markup. The tabbed edition adds the disabled example and documents the native behavior separately from design guidance.</p>', 'changelog']
   ],
   '/components/text-fields/': [
-    ['Interactive example', 'field-demo'],
-    ['Label and hint', '<p>Give the control a persistent label. Place format instructions next to the field before someone starts typing. Use a placeholder only for an optional example.</p>'],
-    ['Native markup', 'field-code'],
-    ['Validation', '<p>Try submitting the empty example, then enter a name and submit again. The message names the repair and the field retains what you typed. Validate on a meaningful boundary, such as submit, so the first keystroke does not immediately appear to be a mistake.</p>']
+    ['Interactive example', 'field-demo', 'examples'],
+    ['Native markup', 'field-code', 'code'],
+    ['Implementation contract', '<dl><dt>Label and hint</dt><dd>Connect the label with <code>for</code> and point <code>aria-describedby</code> to the hint.</dd><dt>Constraints</dt><dd>Use <code>required</code> and <code>maxlength</code> when the application has those constraints. Match those rules when validating the submitted value.</dd><dt>Error state</dt><dd>On a failed submission, set <code>aria-invalid="true"</code> and include the error message ID in <code>aria-describedby</code>. Clear the error association after a valid submission.</dd></dl><p>For product-specific imports and props, check the <a href="https://state-of-agrikit.netlify.app/deck/">Agrikit reference</a> and the package version your project uses.</p>', 'code'],
+    ['Label and hint', '<p>Give the control a persistent label. Place format instructions next to the field before someone starts typing. Use a placeholder only for an optional example.</p>', 'usage'],
+    ['Validation', '<p>In the example, submit an empty name, then enter a name and submit again. The error explains what to fix and the field retains its value. Validate at a meaningful point, such as submit, and show the message next to the field so it stays in context.</p>', 'usage'],
+    ['Documentation history', '<p>The initial guide introduced the workspace-name example with empty and valid submission states. The tabbed edition adds explicit markup and validation contracts.</p>', 'changelog']
   ],
   '/workflows/': [
     ['In the field', 'children'],
