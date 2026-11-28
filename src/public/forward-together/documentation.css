@@ -73,3 +73,25 @@
   .guide-mobile-menu nav { padding-top: .8rem; }
   .guide-landscape { aspect-ratio: 2.6; }
 }
+
+.guide-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: clamp(.9rem, 2.5vw, 2rem);
+  margin-top: 1.75rem;
+  border-bottom: 1px solid var(--line);
+}
+.guide-tabs a {
+  padding: .7rem .1rem;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  font-weight: 600;
+}
+.guide-tabs a:hover, .guide-tabs a[aria-selected="true"] { color: var(--sage); }
+.guide-tabs a[aria-selected="true"] { border-bottom-color: var(--sage); }
+.guide-outline a[hidden] { display: none; }
+.guide-example-source { margin-top: .75rem; }
+.guide-example-source summary { color: var(--sage); font-weight: 600; cursor: pointer; }
+.guide-example-source .code-sample { margin-top: .55rem; }
+.guide-section > p + .guide-demo { margin-top: .75rem; }
+.guide-demo .button:disabled { background: var(--line); color: var(--muted); cursor: default; transform: none; }
