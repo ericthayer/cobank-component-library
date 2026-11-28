@@ -1,7 +1,10 @@
+import { mergeConfig } from 'vite'
+import { editorialPractices } from './editorial/practices.mjs'
+
 const path = require('path')
 import { fieldGuidePages } from './documentation/plugin.mjs'
 
-export default {
+export default mergeConfig({ plugins: [editorialPractices()] }, {
   root: path.resolve(__dirname, 'src'),
   build: {
     outDir: '../dist',
@@ -16,4 +19,4 @@ export default {
   server: {
     port: 8080
   }
-}
+})
